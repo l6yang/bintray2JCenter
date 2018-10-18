@@ -26,7 +26,7 @@ def developerName = properties.getProperty("developer.name")
 def developerEmail = properties.getProperty("developer.email")
 
 def bintrayUser = properties.getProperty("bintray.user")
-def repoName = properties.getProperty("bintray.repo")
+def bintrayRepo = properties.getProperty("bintray.repo")
 def bintrayApikey = properties.getProperty("bintray.apikey")
 
 def javadocName = properties.getProperty("javadoc.name")
@@ -114,7 +114,7 @@ bintray {
     key = bintrayApikey
     configurations = ['archives']
     pkg {
-        repo = repoName
+        repo = bintrayRepo
         name = projectName
         websiteUrl = projectSiteUrl
         vcsUrl = projectGitUrl
